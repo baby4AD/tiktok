@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TikTok Login</title>
+  <style>
+    /* General body and page styling */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #000;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    /* TikTok container */
+    .login-container {
+      width: 360px;
+      background-color: #141414;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+      text-align: center;
+    }
+
+    /* Logo styling */
+    .logo {
+      width: 150px;
+      margin-bottom: 40px;
+    }
+
+    /* Input field styling */
+    .input-field {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      border-radius: 5px;
+      background-color: #1a1a1a;
+      color: white;
+      font-size: 16px;
+    }
+
+    .input-field:focus {
+      outline: none;
+      border-color: #fe2c55;
+    }
+
+    /* Login button styling */
+    .login-btn {
+      width: 100%;
+      padding: 14px;
+      background-color: #fe2c55;
+      color: white;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .login-btn:hover {
+      background-color: #e50044;
+    }
+
+    .login-btn:active {
+      background-color: #a40030;
+    }
+
+    /* Forgot password link */
+    .forgot-password {
+      margin-top: 20px;
+      color: #888;
+      font-size: 14px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .forgot-password:hover {
+      color: white;
+    }
+
+    /* Sign up section */
+    .signup-section {
+      margin-top: 30px;
+      color: #888;
+      font-size: 14px;
+    }
+
+    .signup-section a {
+      color: #fe2c55;
+      text-decoration: none;
+    }
+
+    .signup-section a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <!-- TikTok Logo -->
+    <img src="/imges/tt.png" alt="TikTok Logo" class="logo">
+
+    <!-- Login Form -->
+    <form id="loginForm">
+      <!-- Username or Email input -->
+      <input type="text" id="username" class="input-field" placeholder="Username or Email" required>
+
+      <!-- Password input -->
+      <input type="password" id="password" class="input-field" placeholder="Password" required>
+
+      <!-- Login button -->
+      <button type="submit" class="login-btn">Log In</button>
+    </form>
+
+    <!-- Forgot password link -->
+    <a href="#" class="forgot-password">Forgot Password?</a>
+
+    <!-- Sign up section -->
+    <div class="signup-section">
+      <span>Don't have an account? </span>
+      <a href="#">Sign Up</a>
+    </div>
+  </div>
+
+  <script>
+    // Form submit event
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Simple validation (can be expanded)
+      if (username && password) {
+        alert('Logging in...');
+      } else {
+        alert('Please enter both username and password.');
+      }
+    });
+  </script>
+</body>
+</html>
